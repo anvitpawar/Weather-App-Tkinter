@@ -14,6 +14,7 @@ from PIL import Image, ImageTk
 
 root=Tk()
 
+#function of giving city details
 def searchcity():
     try: 
         city=search_entry.get()
@@ -55,7 +56,7 @@ def searchcity():
         date_label.config(text=curr_date)
     except Exception as e:
         messagebox.showerror("Weather App", "Invalid Entry, Please enter a proper city name.")
-
+#function that runs on clicking new window option
 def open():
     w2=Toplevel()
     w2.title("Know your week - Weather App")
@@ -155,6 +156,7 @@ def open():
 
     day7_day=Label(frame7,text=f'''Day   : \nNight :''',font=("Helvetica",10,'bold'),fg="white",bg="#010082")
     day7_day.place(x=2,y=150)
+    
     
     notice = Label(w2, text="*P.S Demo icons placed, api integration will display day wise temp. and icon.", bg="orange", fg="black")
     notice.pack(side=BOTTOM, pady=10)
